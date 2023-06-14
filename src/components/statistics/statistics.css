@@ -1,0 +1,156 @@
+.newItems__container{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.newItems__me{
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    display: grid;
+    place-items: center;
+}
+
+.newItems__center{
+    display: grid;
+    place-items: center;
+}
+
+.newItems__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+
+}
+
+.newItems__card{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.newItems__card:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.newItems__icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin: 0 10px 0;
+}
+
+.newItems__card h5{
+    font-size: 0.95rem;
+}
+
+.newItems__card small {
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+
+.newItems__content p{
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+.sct{
+    transform: translateY(5%);
+    height: 50%;
+}
+
+.article1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.containerCenter{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.activeSlide{
+    opacity: 1;
+    transform: translateX(0), translateZ(20%);
+    z-index: 500;
+}
+
+.lastSlide{
+    transform: translateX(-100%), translateZ(50%);
+}
+.nextSlide{
+    transform: translateX(100%), translateZ(50%);
+}
+
+.hideBrand{
+    display: none;
+}
+
+.showBrand{
+    display: initial;
+}
+
+
+
+/* ============== srednji uređaj ============== */
+@media screen and (max-width: 1024px) {
+    .newItems__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .newItems__me{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .newItems__content p{
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* ============== mali uređaj ============== */
+@media screen and (max-width: 600px) {
+    .aboutText{
+        display: none;
+    }
+
+    .newItems__me{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .newItems__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .newItems__content{
+        text-align: center;
+    }
+
+    .newItems__content p{
+        margin:  1.5rem 0;
+    }
+
+    .newItems__icon{
+        margin: 0 2px 0;
+    }
+    .btn{
+        margin-top: 4rem !important;
+    }
+}
